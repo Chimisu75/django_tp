@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Tableau de régulation</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content %} {% include 'home.html' %} {% endblock %}
+
+    <!-- Tableau -->
+
+    <table class="table caption-top">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">n°</th>
+          <th scope="col">Heure</th>
+          <th scope="col">Destination</th>
+          <th scope="col">Voie</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for depart in departs %}
+        <tr>
+          <td>{{ depart.train_id }}</td>
+          <td>{{ depart.heure_depart }}</td>
+          <td>{{ depart.destination }}</td>
+          <td>{{ depart.voie }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

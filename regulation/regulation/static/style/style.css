@@ -1,0 +1,27 @@
+/* style.css */
+
+/* Image de fond */
+.bg-image {
+  background-image: url("../img/platform.jpg");
+  background-size: contain;
+  background-position: center;
+  height: 100vh;
+  position: relative; /* Ajout de la position relative pour permettre le positionnement absolu du tableau */
+}
+
+/* Tableau */
+.table {
+  position: absolute;
+  top: 50%; /* Positionne le haut du tableau à 50% de la hauteur de son conteneur parent */
+  left: 50%; /* Positionne la gauche du tableau à 50% de la largeur de son conteneur parent */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Déplace le tableau de moitié de sa propre taille vers le haut et la gauche, le centrant ainsi */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Couleur de fond du tableau avec une transparence de 50% */
+}
