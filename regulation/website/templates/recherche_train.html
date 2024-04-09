@@ -1,0 +1,10 @@
+<!-- app/templates/app/recherche_train.html -->
+{% extends 'accueil.html' %} {% block content %}
+<h2>Résultats de la recherche</h2>
+{% if trains %} {% for train in trains %}
+<p>
+  Train {{ train.train_id }}: {{ train.destination }} à {{ train.heure_depart }}
+</p>
+{% endfor %} {% else %}
+<p>Aucun train trouvé.</p>
+{% endif %} {% endblock %}
